@@ -144,6 +144,33 @@ describe('Game', () => {
             });
         });
 
+        describe('getCurrentWinner', () => {
+            it('that should return 0 if player 1 is winning', () => {
+                game.resetGame();
+                let option1 = game.getGameTypes()[0].options[0].id, //paper
+                    option2= game.getGameTypes()[0].options[1].id; //rock
+                game.play(option1,option2);
+                game.play(option1,option2);
+                expect(game.getCurrentWinner()).toEqual(0);
+            });
+            it('that should return 1 if player 1 is winning', () => {
+                game.resetGame();
+                let option1 = game.getGameTypes()[0].options[1].id, //rock
+                    option2= game.getGameTypes()[0].options[0].id; //paper
+                game.play(option1,option2);
+                game.play(option1,option2);
+                expect(game.getCurrentWinner()).toEqual(1);
+            });
+            it('that should return -1  if they are tied', () => {
+                game.resetGame();
+                let option1 = game.getGameTypes()[0].options[0].id, //paper
+                    option2= game.getGameTypes()[0].options[0].id; //paper
+                game.play(option1,option2);
+                game.play(option1,option2);
+                expect(game.getCurrentWinner()).toEqual(-1);
+            });
+        });
+
 
 
     });
