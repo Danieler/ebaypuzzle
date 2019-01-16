@@ -9,14 +9,6 @@ const sourcemaps  = require('gulp-sourcemaps');
 const livereload  = require('gulp-livereload');
 const jasmine = require('gulp-jasmine');
 const babel =  require("gulp-babel");
-require('babel-core/register');
-
-
-gulp.task('clientTest', () =>
-    gulp.src('./client/spec/*.js').pipe(jasmine({
-        includeStackTrace: true
-    }))
-);
 
 gulp.task('build', function () {
     return browserify({entries: './client/source/index.js', debug: true})

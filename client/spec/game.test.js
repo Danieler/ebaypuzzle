@@ -1,7 +1,10 @@
+import * as CONFIG from '../source/gameConfig';
 import { Game }  from '../source/game';
 
-describe("A suite", function() {
-    it("contains spec with an expectation", function() {
-        expect(true).toBe(true);
+describe('Game', () => {
+    console.log( Game);
+    console.log( CONFIG);
+    it('number', () => {
+        expect(CONFIG.gameTypes[0].id).toBe(2);
     });
 });

@@ -1,4 +1,4 @@
-export default class Game {
+export class Game {
     constructor(gameModes, gameTypes) {
         this._scorePlayer1 = 0;
         this._scorePlayer2 = 0;
