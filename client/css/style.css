@@ -1,6 +1,25 @@
 body {
-    font-family: 'Jura', sans-serif;
-    background:#0a4981;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(6,191,148,1);
+    background: -moz-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(6,191,148,1)), color-stop(100%, rgba(0,152,190,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: linear-gradient(135deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06bf94', endColorstr='#0098be', GradientType=1 );
+}
+.purple-color {
+    color: #5B0039;
+}
+.skin-color {
+    color: #EF9792;
+}
+.red-color {
+    color: #FF2D38;
+}
+.blue-color {
+    color: #006788;
 }
 h1 {
     color: #fff;
@@ -9,17 +28,24 @@ h1 {
     font-size: 3em;
     font-weight: 700;
 }
-/*-- main --*/
 .main {
-    margin: 4em auto;
+    margin: 0.5em auto;
     width: 50%;
 }
-.banner {
-    background: url(../images/banner.jpg)no-repeat 0px 0px;
-    background-size: cover;
+.main-title h1 {
+    padding: 0;
+    margin:  0;
+}
+.veil {
+    background: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+}
+.veil h1{
+    padding: 0;
 }
 
-/*--signin-form--*/
 .w3 {
     float: left;
     width: 48%;
@@ -30,9 +56,7 @@ h1 {
     width: 48%;
 }
 .signin-form {
-    background: url(../images/banner1.jpg)no-repeat 0px 0px;
-    background-size: cover;
-    padding: 2em 2em;
+    padding: 1em 2em;
     text-align: center;
 }
 .signin-form h3 {
@@ -85,7 +109,7 @@ h1 {
     cursor: pointer;
     background: #0b4379;
     box-shadow: 0px 2px 1px rgba(28, 28, 29, 0.42);
-    border-radius: 22px;
+    border-radius: 5px;
 
 }
 .signin-form input[type="submit"]:hover {
@@ -102,11 +126,6 @@ h1 {
     color: #fff;
     letter-spacing: 1px;
 }
-/*--//signin-form--*/
-.header-social {
-    text-align: center;
-    margin-bottom: 2em;
-}
 .tp {
     margin: 3.7em 0 0;
 }
@@ -114,88 +133,6 @@ h5 {
     border-left: 1px dotted #7467b9;
     padding: 0.5em;
 }
-.header-social a.face{
-    background:url(../images/fac.png)no-repeat 12px 9px #3B62A3;
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 0 2em;
-    width: 30%;
-    text-align: left;
-    margin-right: 0%;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    display: inline-block;
-    float:left;
-    border-radius: 14px 0px 0px 14px;
-}
-.header-social a.face:hover{
-    background:url(../images/fac.png)no-repeat 12px 9px #0E387C;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-}
-/*-- w3layouts --*/
-.header-social a.goog {
-    background:url(../images/google.png)no-repeat 12px 9px #D64639;
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 0 2.5em;
-    width: 24%;
-    text-align: left;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    float:left;
-    border-radius: 0px 14px 14px 0px;
-}
-.header-social a.goog:hover {
-    background: url(../images/google.png)no-repeat 12px 9px #ff4b3b;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-}
-.header-social h4 {
-    font-size: 17px;
-    color: #6A67CE;
-    text-align: center;
-    margin: 20px 0px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.header-social h4 a{
-    color:#6A67CE;
-}
-.header-social h4 a:hover{
-    color:#FFB900;
-}
-/*--copyright--*/
-.copyright {
-    margin: 2em;
-    text-align: center;
-}
-.copyright p {
-    font-size: 1em;
-    color: #fff;
-    line-height:1.8em;
-}
-.copyright p a{
-    color: #fff;
-}
-.copyright p a:hover{
-    color:#56c8dc;
-}
-/*--//copyright--*/
-/*-- agileits --*/
-/*---- responsive-design -----*/
 @media(max-width:1440px){
     .main {
         width: 56%;
@@ -217,7 +154,7 @@ h5 {
 @media(max-width:1080px){
     .main {
         width: 74%;
-        margin: 2em auto;
+        margin: 0 auto;
     }
 }
 @media(max-width:1024px){
@@ -225,7 +162,7 @@ h5 {
         width: 82%;
     }
     .signin-form {
-        padding: 3em 2.5em;
+        padding: 2em 2.5em;
     }
 }
 @media(max-width:991px){
@@ -266,7 +203,6 @@ h5 {
         width: 55%;
     }
 }
-/*-- w3layouts --*/
 @media(max-width:667px){
     .main {
         width: 61%;
@@ -291,12 +227,6 @@ h5 {
     .main {
         width: 78%;
     }
-    .header-social a.face {
-        width: 27%;
-    }
-    .header-social a.goog {
-        width: 21%;
-    }
     .w3 {
         margin-bottom: 0%;
     }
@@ -310,12 +240,8 @@ h5 {
         margin-top: 2em;
     }
     .signin-form {
-        padding: 2em 2em;
+        padding: 1em 2em;
     }
-    .copyright p {
-        font-size: 0.9em;
-    }
-    /*-- agileits --*/
 }
 @media(max-width:414px){
     .signin-form input[type="text"], .signin-form input[type="password"] {
@@ -324,17 +250,8 @@ h5 {
     .signin-form {
         padding: 2em 1.5em;
     }
-    .header-social a.face {
-        width: 25%;
-    }
-    .header-social a.goog {
-        width: 19%;
-    }
     .tp {
         margin: 1.7em 0 0;
-    }
-    .header-social {
-        margin-bottom: 1em;
     }
     .signin-form h3 {
         margin-bottom: 1em;
@@ -347,19 +264,10 @@ h5 {
     h1 {
         font-size: 2em;
     }
-    .header-social a.face {
-        width: 22%;
-    }
-    .header-social a.goog {
-        width: 17%;
-    }
 }
 @media(max-width:375px){
     .main {
         width: 79%;
-    }
-    .header-social a.goog {
-        width: 15%;
     }
 }
 @media(max-width:320px){
@@ -374,7 +282,7 @@ h5 {
         margin: 1em 0 1.5em;
     }
     .signin-form {
-        padding: 1.5em 1.5em;
+        padding: 0.5em 1.5em;
     }
     .signin-form h3 {
         font-size: 1.5em;
@@ -389,27 +297,7 @@ h5 {
     .signin-form p a {
         font-size: 0.9em;
     }
-    .header-social a.face {
-        background: url(../images/fac.png)no-repeat 12px 6px #3B62A3;
-        font-size: 14px;
-        width: 24%;
-    }
     .signin-form p a {
         line-height: 1.5em;
-    }
-    .copyright {
-        margin: 1em;
-    }
-    .header-social a.face:hover {
-        background: url(../images/fac.png)no-repeat 12px 6px #0E387C;
-    }
-    .header-social a.goog {
-        background: url(../images/google.png)no-repeat 12px 6px #D64639;
-        font-size: 14px;
-        padding: 0 2.5em;
-        width: 19%;
-    }
-    .header-social a.goog:hover {
-        background: url(../images/google.png)no-repeat 12px 6px #ff4b3b;
     }
 }
