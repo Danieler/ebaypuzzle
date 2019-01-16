@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+    background: rgba(6,191,148,1);
+    background: -moz-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(6,191,148,1)), color-stop(100%, rgba(0,152,190,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    background: linear-gradient(135deg, rgba(6,191,148,1) 0%, rgba(0,152,190,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06bf94', endColorstr='#0098be', GradientType=1 );
+}
+.col-1 h1,.col-1 h2,.col-1 h3 {
+    color:#006788;
+}
+.col-1 {
+    background: white;
+    flex: 1;
+    text-align: center;
+}
+.col-1 img {
+    width: 7rem;
+}
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.content > article {
+    flex: 4;
+    min-height: 60vh;
+}
+header, footer, .content-container {
+    background: rgba( 255, 255, 255, 0.9 );
+    border-radius: 5px;
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.content {
+    margin-top: 2rem;
+}
+header, footer, article, nav {
+    padding: 1rem;
+}
+header {
+    min-height: 270px;
+}
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    height: 240px;
+    width: 240px;
+}
+
+/**select*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #0098BE;
+    background-image: none;
+}
+/* Custom Select */
+.select {
+    position: relative;
+    display: block;
+    width: 12em;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    background: #0098BE;
+    overflow: hidden;
+    border-radius: .25em;
+}
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+/* Arrow */
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #006788;
+    pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+    color: #f32b35;
+}
+.select::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+/*button*/
+.button {
+    margin-top: 1.5rem;
+    background-color: #7db9e8;
+    background: -webkit-linear-gradient(#ff2d38, #f32b35);
+    background: linear-gradient(#ff2d38, #f32b35);
+    border: solid 1px white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 1px #fff;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 2.5rem;
+    outline: none;
+    padding: 0 25px;
+}
+.button:hover {
+    background-color: #f32b35;
+    background: -webkit-linear-gradient(#ff2d38, #f32b35);
+    background: linear-gradient(#ff2d38, #f32b35);
+    border: solid 1px #white;
+    box-shadow: inset 0 0 2px #fff;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+.button[disabled] {
+    background: #ccc;
+    color: #999;
+    cursor: default;
+    text-shadow: 1px 1px 1px #fff;
+}
+/**/
+.gameOption {
+    width: 5rem;
+    cursor: pointer;
+    transition: width 0.2s;
+}
+.gameOption:hover {
+   width: 5.5rem;
+}
+.purple-color {
+    color: #5B0039;
+}
+.skin-color {
+    color: #EF9792;
+}
+.red-color {
+    color: #FF2D38;
+}
+.blue-color {
+    color: #006788;
+}
+.content div {
+    display: flex;
+    flex: 1;
+}
+.content div img{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+}
+.playSymbol {
+    font-size: 4rem;
+    line-height: 3;
+    margin: 0 auto;
+}
+.result-box {
+    display: inline-block;
+    width: 49%;
+}
+.result-box h2 {
+    font-size: 1.3rem;
+}
+.hidden {
+    display: none;
+}

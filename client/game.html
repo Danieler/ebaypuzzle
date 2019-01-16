@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/normalice.css" rel="stylesheet">
+    <link href="css/game.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="col-1">
+    <img src="assets/game_icon.gif"/>
+    <h3>Select Mode</h3>
+    <div class="select">
+        <select name="slct" id="modeSelector" onChange="$viewController.changeGameMode()">
+
+        </select>
+    </div>
+    <h3>Select Rules</h3>
+    <div class="select">
+        <select name="slct" id="rulesSelector">
+            <option value="1">Standard</option>
+        </select>
+    </div>
+    <button  class="button" onclick="$viewController.startGame()">Start Game</button>
+
+</nav>
+<div class="col-2 " >
+    <header >
+
+        <div id="welcomeContainer">
+            <h1 class="blue-color">Welcome to</h1>
+            <h1>
+                <span class="purple-color">Rock</span><span class="skin-color">Paper</span><span class="purple-color">Scissors</span>
+            </h1>
+            <h1 class="blue-color">Click to <span class="red-color">Start!</span></h1>
+        </div>
+
+        <div id="finalWinnerContainer"  class="hidden">
+            <h1 class="blue-color">Final Winner:</h1>
+            <h1>
+                <span class="purple-color">Rock</span><span class="skin-color">Paper</span><span class="purple-color">Scissors</span>
+            </h1>
+            <h1 class="blue-color" id="finalWinner"></h1>
+        </div>
+
+        <div id="chooseContainer" class="hidden">
+            <h1 class="red-color">Choose</h1>
+            <h1>
+               <span class="purple-color">Rock</span><span class="skin-color">Paper</span><span class="purple-color">Scissors</span>
+           </h1>
+            <a onclick="$viewController.selectOption('rock')">
+                <img class="gameOption" src="/assets/rock.svg">
+            </a>
+            <a onclick="$viewController.selectOption('paper')">
+                <img class="gameOption" src="/assets/paper.svg">
+            </a>
+            <a onclick="$viewController.selectOption('scissor')">
+                <img class="gameOption" src="/assets/scissor.svg">
+            </a>
+        </div>
+        <div id="automaticContainer" class="hidden">
+            <h1 class="red-color">Play</h1>
+            <h1>
+                <span class="purple-color">Rock</span><span class="skin-color">Paper</span><span class="purple-color">Scissors</span>
+            </h1>
+            <a onclick="$viewController.playAutomatic()">
+                <img class="gameOption" src="/assets/play.png">
+            </a>
+        </div>
+    </header>
+    <main id="main" class="content-container hidden">
+        <h1 ><span class="red-color">Round:</span> <span  id="round-indicator" class="purple-color">1</span></h1>
+        <div class="content">
+            <div id="firstPlayerOption"></div>
+            <div><span class="purple-color playSymbol">VS</span></div>
+            <div id="secondPlayerOption"></div>
+        </div>
+        <h1 ><span id="playWinner" class="red-color"></span></h1>
+
+    </main>
+    <footer id="footer" class="hidden">
+        <h1 class="red-color">Result</h1>
+        <div class="result-box">
+            <h2><span class="blue-color">Player1:</span> <span id="player1score"></span></h2>
+        </div>
+        <div class="result-box">
+            <h2><span class="blue-color">Player2:</span> <span id="player2score"></span></h2>
+        </div>
+    </footer>
+</div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

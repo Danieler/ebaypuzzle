@@ -1,0 +1,48 @@
+{
+  "name": "ebay-puzzle-dani",
+  "version": "1.0.0",
+  "description": "ebay puzzle about rock paper scissors",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "js_merge": "./node_modules/.bin/browserify client/source/index.js --outfile=client/js/index.js"
+  },
+  "author": "Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.4.3",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-loader": "^5.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "gulp": "^3.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-jasmine": "^4.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "jasmine": "^3.3.1",
+    "jasmine-core": "^2.99.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^0.3.8",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^1.8.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.0",
+    "webpack": "^1.8.4"
+  }
+}
