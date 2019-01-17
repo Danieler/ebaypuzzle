@@ -19,3 +19,12 @@ You must have MongoDb installed with a database with name "ebayPuzzle"
 ## Running the tests
 
 npm run test
+
+## Stack
+
+NodeJs - express and mongoose for session and register services in backend
+
+es6 (builded with babel through gulp task to js folder) for client and game logic (source)
+
+Pure Css and html5 for presentation.
+
