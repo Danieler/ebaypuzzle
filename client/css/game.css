@@ -22,8 +22,9 @@ body {
 }
 .col-1 {
     background: white;
-    flex: 1;
+    flex: 2;
     text-align: center;
+    min-height: 100vh;
 }
 .col-1 img {
     width: 7rem;
@@ -81,7 +82,7 @@ select {
 .select {
     position: relative;
     display: block;
-    width: 12em;
+    width: 100%;
     height: 2.5rem;
     line-height: 2.5rem;
     background: #0098BE;
@@ -106,7 +107,7 @@ select::-ms-expand {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 0 1em;
+    padding: 0 0.5em;
     background: #006788;
     pointer-events: none;
 }
