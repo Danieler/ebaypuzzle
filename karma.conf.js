@@ -20,7 +20,7 @@ module.exports = function(config) {
             noInfo: true
         },
         reporters: ['spec'],
-        singleRun: false,
+        singleRun: true,
         plugins: [
             'karma-webpack' ,
             'karma-jasmine',
