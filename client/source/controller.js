@@ -33,6 +33,9 @@ export default class ViewController {
             if (this.$chooseContainer.classList.contains("hidden")) {
                 this.$chooseContainer.classList.remove('hidden');
             }
+            if (!this.$automaticContainer.classList.contains("hidden")) {
+                this.$automaticContainer.classList.add('hidden');
+            }
         } else {
             if (!this.$chooseContainer.classList.contains("hidden")) {
                 this.$chooseContainer.classList.add('hidden');
@@ -132,8 +135,8 @@ export default class ViewController {
         this.$roundIndicator.innerText = round;
     }
     paintOptions(player1option, player2option) {
-        let imageplayer1 = `<img src="/assets/${player1option}.svg" />`,
-            imageplayer2 = `<img src="/assets/${player2option}.svg" />`;
+        let imageplayer1 = `<img class="animationUp" src="/assets/${player1option}.svg" />`,
+            imageplayer2 = `<img class="animationUp" src="/assets/${player2option}.svg" />`;
 
         this.$firstPlayerOption.innerHTML = imageplayer1;
         this.$secondPlayerOption.innerHTML = imageplayer2;
