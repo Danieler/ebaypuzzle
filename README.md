@@ -31,5 +31,6 @@ NodeJs - express and mongoose for session and register services in backend
 
 es6 (builded with babel through gulp task to js folder) for client and game logic (source)
 
-Pure Css and html5 for presentation.
+Pure CSS and HTML5 for presentation.
 
+karma + jasmine for unit test
