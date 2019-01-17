@@ -6,6 +6,11 @@ The Rock Paper Scissors game for ebay puzzle
 
 npm install / yarn install
 
+### Browsers
+
+Works in IE11, Edge, Firefox and Chrome
+not tested in the rest.
+
 ## Getting Started
 
 run: npm start in terminal
