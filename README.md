@@ -1,6 +1,6 @@
-# Daniel Esteban Ebay Puzzle
+# Daniel Esteban Rock Paper Scissors Puzzle
 
-The Rock Paper Scissors game for ebay puzzle
+The Rock Paper Scissors game
 
 ### Installing
 
@@ -19,7 +19,7 @@ First you have to register with sign in form for continue to the game
 
 ### Prerequisites
 
-You must have MongoDb installed with a database with name "ebayPuzzle"
+You must have MongoDb installed with a database with name "rockPaper"
 
 ## Running the tests
 

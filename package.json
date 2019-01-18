@@ -1,7 +1,7 @@
 {
-  "name": "ebay-puzzle-dani",
+  "name": "rock-paper-dani",
   "version": "1.0.0",
-  "description": "ebay puzzle about rock paper scissors",
+  "description": "puzzle about rock paper scissors",
   "main": "index.js",
   "scripts": {
     "test": "karma start",

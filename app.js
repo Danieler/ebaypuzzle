@@ -4,12 +4,12 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 
-mongoose.connect('mongodb://localhost/ebayPuzzle');
+mongoose.connect('mongodb://localhost/rockPaper');
 const db = mongoose.connection;
 db.on('error', () => console.log("connection error"));
 
 app.use(session({
-    secret: 'ebay',
+    secret: 'rock',
     resave: true,
     saveUninitialized: false
 }));
