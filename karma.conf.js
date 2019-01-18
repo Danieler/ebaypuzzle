@@ -1,6 +1,14 @@
 module.exports = function(config) {
     config.set({
         browsers: ['Chrome'],
+        client: {
+            karmaHTML: {
+                source: [
+                     {src: './client/game.html', tag: 'game'}
+                ],
+                auto: true
+            }
+        },
         files: [
             { pattern: 'test-context.js', watched: false }
         ],
@@ -19,11 +27,12 @@ module.exports = function(config) {
         webpackServer: {
             noInfo: true
         },
-        reporters: ['spec'],
+        reporters: ['spec','karmaHTML'],
         singleRun: true,
         plugins: [
             'karma-webpack' ,
             'karma-jasmine',
+            'karma-html',
             'karma-chrome-launcher',
             'karma-spec-reporter'
         ],

@@ -1,21 +1,8 @@
-export default class ViewController {
+export class ViewController {
 
     constructor(game) {
         this.game = game;
-        this.$main =   document.getElementById('main');
-        this.$roundIndicator = document.getElementById('round-indicator');
-        this.$footer = document.getElementById('footer');
-        this.$player1score = document.getElementById('player1score');
-        this.$player2score = document.getElementById('player2score');
-        this.$firstPlayerOption = document.getElementById('firstPlayerOption');
-        this.$secondPlayerOption = document.getElementById('secondPlayerOption');
-        this.$chooseContainer = document.getElementById('chooseContainer');
-        this.$welcomeContainer = document.getElementById('welcomeContainer');
-        this.$playWinner = document.getElementById('playWinner');
-        this.$finalWinnerContainer = document.getElementById('finalWinnerContainer');
-        this.$finalWinner = document.getElementById('finalWinner');
-        this.$modeSelector =  document.getElementById('modeSelector');
-        this.$automaticContainer = document.getElementById('automaticContainer');
+        this.initDomSelectors(document);
         this.gameMode = game.getGameModes()[0].id;
         this.WINMESSAGES = [
             "Player1 Wins",
@@ -23,6 +10,24 @@ export default class ViewController {
             "Itś a Tie"
         ];
         this.fillModeSelector();
+    }
+
+    initDomSelectors(element) {
+    
+        this.$main =   element.getElementById('main');
+        this.$roundIndicator = element.getElementById('round-indicator');
+        this.$footer = element.getElementById('footer');
+        this.$player1score = element.getElementById('player1score');
+        this.$player2score = element.getElementById('player2score');
+        this.$firstPlayerOption = element.getElementById('firstPlayerOption');
+        this.$secondPlayerOption = element.getElementById('secondPlayerOption');
+        this.$chooseContainer = element.getElementById('chooseContainer');
+        this.$welcomeContainer = element.getElementById('welcomeContainer');
+        this.$playWinner = element.getElementById('playWinner');
+        this.$finalWinnerContainer = element.getElementById('finalWinnerContainer');
+        this.$finalWinner = element.getElementById('finalWinner');
+        this.$modeSelector =  element.getElementById('modeSelector');
+        this.$automaticContainer = element.getElementById('automaticContainer');
     }
 
     startGame() {
@@ -66,12 +71,14 @@ export default class ViewController {
     }
 
     fillModeSelector() {
-        this.game.getGameModes().map((mode) =>{
-            let option = document.createElement("option");
-            option.text = mode.label;
-            option.value = mode.id;
-            this.$modeSelector.add(option);
-        });
+        if(this.$modeSelector) {
+            this.game.getGameModes().map((mode) =>{
+                let option = document.createElement("option");
+                option.text = mode.label;
+                option.value = mode.id;
+                this.$modeSelector.add(option);
+            });
+        }
     }
     changeGameMode() {
         this.gameMode= parseInt(this.$modeSelector.value);
